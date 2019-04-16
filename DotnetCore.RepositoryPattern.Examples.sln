@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.UnitOfWork", "DotnetCore.UnitOfWork\DotnetCore.UnitOfWork.csproj", "{59808C73-B80F-4B74-9948-8F800038DAC9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotnetCore.RepositoryPattern2", "DotnetCore.RepositoryPattern2\DotnetCore.RepositoryPattern2.csproj", "{CAC63E4A-F097-46CD-A23F-69F57DF2948A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryPattern.Tests", "RepositoryPattern.Tests\RepositoryPattern.Tests.csproj", "{8635889A-2E70-41E9-AF98-8A97728D8ECE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotnetCore.RepositoryPattern", "DotnetCore.RepositoryPattern\DotnetCore.RepositoryPattern.csproj", "{68DB279F-4393-4AAF-A0C0-EF241C9742D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +19,14 @@ Global
 		{59808C73-B80F-4B74-9948-8F800038DAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{59808C73-B80F-4B74-9948-8F800038DAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{59808C73-B80F-4B74-9948-8F800038DAC9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{CAC63E4A-F097-46CD-A23F-69F57DF2948A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CAC63E4A-F097-46CD-A23F-69F57DF2948A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CAC63E4A-F097-46CD-A23F-69F57DF2948A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CAC63E4A-F097-46CD-A23F-69F57DF2948A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8635889A-2E70-41E9-AF98-8A97728D8ECE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8635889A-2E70-41E9-AF98-8A97728D8ECE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8635889A-2E70-41E9-AF98-8A97728D8ECE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8635889A-2E70-41E9-AF98-8A97728D8ECE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68DB279F-4393-4AAF-A0C0-EF241C9742D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68DB279F-4393-4AAF-A0C0-EF241C9742D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68DB279F-4393-4AAF-A0C0-EF241C9742D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68DB279F-4393-4AAF-A0C0-EF241C9742D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

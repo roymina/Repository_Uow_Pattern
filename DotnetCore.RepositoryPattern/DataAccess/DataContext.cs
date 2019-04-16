@@ -1,4 +1,4 @@
-﻿using DotnetCore.RepositoryPattern2.Entities;
+﻿using DotnetCore.RepositoryPattern.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Linq;
@@ -6,10 +6,10 @@ using System.Security.Principal;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace DotnetCore.RepositoryPattern2.DataAccess
+namespace DotnetCore.RepositoryPattern.DataAccess
 {
     public class DataContext : DbContext
-    {
+    { 
         public DataContext(DbContextOptions<DataContext> options) : base(options) { }
 
         protected override void OnModelCreating(ModelBuilder builder)
@@ -74,6 +74,7 @@ namespace DotnetCore.RepositoryPattern2.DataAccess
             }
         }
 
-        public DbSet<Blog> Blog { get; set; } 
+        public virtual DbSet<Blog> Blogs { get; set; }
+        public virtual DbSet<Post> Posts { get; set; }
     }
 }

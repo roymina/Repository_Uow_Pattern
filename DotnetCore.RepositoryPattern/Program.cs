@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace DotnetCore.RepositoryPattern2
+namespace DotnetCore.RepositoryPattern
 {
     public class Program
     {

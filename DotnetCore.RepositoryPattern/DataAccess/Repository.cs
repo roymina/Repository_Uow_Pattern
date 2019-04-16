@@ -5,7 +5,7 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Threading.Tasks;
 
-namespace DotnetCore.RepositoryPattern2.DataAccess
+namespace DotnetCore.RepositoryPattern.DataAccess
 {
     public class Repository<T> : IRepository<T> where T : class
     {
@@ -16,12 +16,12 @@ namespace DotnetCore.RepositoryPattern2.DataAccess
             _context = dbContext;
         }
 
-        public IQueryable<T> GetAll()
+        public IEnumerable<T> GetAll()
         {
             return _context.Set<T>();
         }
 
-        public virtual async Task<ICollection<T>> GetAllAsyn()
+        public virtual async Task<IEnumerable<T>> GetAllAsyn()
         {
 
             return await _context.Set<T>().ToListAsync();
@@ -63,12 +63,12 @@ namespace DotnetCore.RepositoryPattern2.DataAccess
             return await _context.Set<T>().SingleOrDefaultAsync(match);
         }
 
-        public ICollection<T> FindAll(Expression<Func<T, bool>> match)
+        public IEnumerable<T> FindAll(Expression<Func<T, bool>> match)
         {
             return _context.Set<T>().Where(match).ToList();
         }
 
-        public async Task<ICollection<T>> FindAllAsync(Expression<Func<T, bool>> match)
+        public async Task<IEnumerable<T>> FindAllAsync(Expression<Func<T, bool>> match)
         {
             return await _context.Set<T>().Where(match).ToListAsync();
         }
@@ -77,6 +77,7 @@ namespace DotnetCore.RepositoryPattern2.DataAccess
         {
             _context.Set<T>().Remove(entity);
             _context.SaveChanges();
+            
         }
 
         public virtual async Task<int> DeleteAsyn(T entity)
@@ -132,29 +133,29 @@ namespace DotnetCore.RepositoryPattern2.DataAccess
             return await _context.SaveChangesAsync();
         }
 
-        public virtual IQueryable<T> FindBy(Expression<Func<T, bool>> predicate)
+        public virtual IEnumerable<T> FindBy(Expression<Func<T, bool>> predicate)
         {
-            IQueryable<T> query = _context.Set<T>().Where(predicate);
+            IEnumerable<T> query = _context.Set<T>().Where(predicate);
             return query;
         }
 
-        public virtual async Task<ICollection<T>> FindByAsyn(Expression<Func<T, bool>> predicate)
+        public virtual async Task<IEnumerable<T>> FindByAsyn(Expression<Func<T, bool>> predicate)
         {
             return await _context.Set<T>().Where(predicate).ToListAsync();
         }
 
-        public IQueryable<T> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties)
-        {
+        //public IEnumerable<T> GetAllIncluding(params Expression<Func<T, object>>[] includeProperties)
+        //{
 
-            IQueryable<T> queryable = GetAll();
-            foreach (Expression<Func<T, object>> includeProperty in includeProperties)
-            {
+        //    IEnumerable<T> queryable = GetAll();
+        //    foreach (Expression<Func<T, object>> includeProperty in includeProperties)
+        //    {
 
-                queryable = queryable.Include<T, object>(includeProperty);
-            }
+        //        queryable = queryable.Include<T, object>(includeProperty);
+        //    }
 
-            return queryable;
-        }
+        //    return queryable;
+        //}
 
         private bool disposed = false;
         protected virtual void Dispose(bool disposing)

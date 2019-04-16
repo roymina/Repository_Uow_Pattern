@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DotnetCore.RepositoryPattern2.Entities
+namespace DotnetCore.RepositoryPattern.Entities
 {
     /// <summary>
     /// 可審計的

@@ -1,11 +1,11 @@
-﻿using DotnetCore.RepositoryPattern2.Entities;
+﻿using DotnetCore.RepositoryPattern.Entities;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DotnetCore.RepositoryPattern2.DataAccess
+namespace DotnetCore.RepositoryPattern.DataAccess
 {
     public class BlogRepository : Repository<Blog>, IBlogRepository
     {
