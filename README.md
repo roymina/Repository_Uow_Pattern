@@ -2,10 +2,16 @@
 
 demoes of appling Repository/UnitOfWork pattern for Asp.net core/EF Core 2.0 web application
 
-# DotnetCore.UnitOfWork
+## DotnetCore.RepositoryPattern
+
+use Repository Pattern without UOW
+
+## DotnetCore.UnitOfWork
 
 use Repository Pattern & Unit Of Work
 
-# DotnetCore.RepositoryPattern2
+## RepositoryPattern.Tests
 
-use Repository Pattern without UOW
+Test Demo for DotnetCore.RepositoryPattern Project
+
+
